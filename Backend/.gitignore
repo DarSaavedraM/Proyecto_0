@@ -1,0 +1,8 @@
+__pycache__
+venv
+database.sqlite
+.env
+venv/
+newenv/
+static/
+*.sqlite
