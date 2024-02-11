@@ -52,6 +52,6 @@ Para cualquier otro problema, revisa los registros de errores o abre un issue en
 ## SUSTENTACIÓN:
 la sustentación del proyecto podrá ser consultada directamente en: https://www.canva.com/design/DAF8hmDHLXs/Vl7pqntboKlIOsrJyRlh4A/view?utm_content=DAF8hmDHLXs&utm_campaign=designshare&utm_medium=link&utm_source=editor . TENGA EN CUENTA QUE DEBERÁ HABILITAR LA REPRODUCCIÓN DEL VIDEO TANTO DE LA PANTALLA COMO DE LA CÁMARA,de los contrario sólo verá uno de los dos videos.
 
-Igualmente podrá acceder o descargar el video adjunto sustentación.mp4 en caso de no poder acceder a la sustentación en web. Se recomienda duplicar el repositorio excluyendo éste archivo.
+Igualmente podrá acceder o descargar el video adjunto David Saavedra_SustentacionProyecto0.mp4 Adjunto en la entrega del proyecto en BloqueNeon.
 
 
