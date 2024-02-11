@@ -12,10 +12,11 @@ from services.dependencies import get_current_user
 from models.usuario import Usuario as UserModel
 from models.categoria import Categoria as CategoriaModel
 from schemas.tarea import TaskCreate
+from schemas.tarea import TaskResponse
 
 task_router = APIRouter()
 
-@task_router.get('/tareas/usuario', tags=['tareas'], response_model=List[TaskCreate], dependencies=[Depends(JWTBearer())])
+@task_router.get('/tareas/usuario', tags=['tareas'], response_model=List[TaskResponse], dependencies=[Depends(JWTBearer())])
 def get_tarea_usuario(db: Session = Depends(get_db), current_user: UserModel = Depends(get_current_user)):
     try:
         result = db.query(TareaModel).filter(TareaModel.id_usuario == current_user.id).all()

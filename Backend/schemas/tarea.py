@@ -29,3 +29,6 @@ class TaskCreate(BaseModel):
                 "estado": "Sin Empezar",
             }
         }
+
+class TaskResponse(TaskCreate):
+    id: int

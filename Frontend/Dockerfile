@@ -4,6 +4,17 @@ FROM python:3.11.8-slim
 # Set the working directory in the container
 WORKDIR /app
 
+# Install system dependencies for GTK
+RUN apt-get update --fix-missing
+
+RUN apt-get update --fix-missing && apt-get install -y --fix-missing \
+    libgtk-3-0 \
+    libgdk-pixbuf2.0-0 \
+    libpango-1.0-0 \
+    libcairo2 \
+    libpangocairo-1.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy the dependencies file to the working directory
 COPY requirements.txt .
 
@@ -13,14 +24,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
+# Make port 8081 available to the world outside this container
+EXPOSE 8081
 
 # Define environment variable
 ENV PYTHONUNBUFFERED=1
 
-# Instalar sqlite3
-RUN apt-get update && apt-get install -y sqlite3
-
 # Run main.py when the container launches
-CMD ["uvicorn", "main:app", "--port", "8080", "--host", "0.0.0.0"]
+CMD ["python", "main.py"]
