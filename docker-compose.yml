@@ -13,15 +13,6 @@ services:
     networks:
       - app_network
 
-  frontend:
-    build: ./Frontend
-    ports:
-      - "8081:8081"
-    depends_on:
-      - backend
-    networks:
-      - app_network
-
 volumes:
   static_volume:
 
